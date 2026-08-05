@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perch — Hotel search</title>
+    <meta
+      name="description"
+      content="Hotel search interface built in dependency-free TypeScript: filtering and sorting over the data, shareable URLs and an accessible combobox."
+    />
+    <meta name="theme-color" content="#0b0d12" />
+
+    <!-- Same geometry as the in-app mark, inlined so the tab icon costs no request. -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23ff5a5f'/%3E%3Cg fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 13 L12 6.6 L19 13'/%3E%3C/g%3E%3Ccircle cx='12' cy='16.6' r='1.9' fill='white'/%3E%3C/svg%3E"
+    />
+
+    <script>
+      // Resolve the theme before first paint so the page never flashes light.
+      (function () {
+        try {
+          var stored = localStorage.getItem('perch.theme');
+          var theme =
+            stored ||
+            (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          document.documentElement.dataset.theme = theme;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#app">Skip to content</a>
+    <main id="app"></main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
