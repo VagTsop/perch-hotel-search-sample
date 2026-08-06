@@ -4,7 +4,7 @@ A hotel search interface built in **dependency-free TypeScript**. No framework,
 no jQuery, no CSS library, no icon font: **14 kB gzipped** for the whole
 application.
 
-**[Live demo](https://quirky-franklin-54cb91.netlify.app/)**
+**[Live demo](https://vagtsop.github.io/perch-hotel-search-sample/)**
 
 ---
 
